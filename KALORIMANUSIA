@@ -3,7 +3,7 @@ using namespace std;
 
 struct makanan {
 	string nama;
-	int rasa;
+	string rasa;
 	int kalori;
 };
 
@@ -17,7 +17,7 @@ struct manusia {
 	int tingkatKalori;
 	
 	printKalori() {
-		cout << "Tingkat kalori" << nama << " saat ini adalah " << tingkatKalori << "\n";	
+		cout << "Tingkat kalori " << nama << " saat ini adalah " << tingkatKalori << "\n";	
 	}
 
 	makan (makanan objekMakanan) {
@@ -28,30 +28,30 @@ struct manusia {
 };
 
 int main() {
-	makanan mkn1;
-	mkn1.nama = "daging ayam";
-	mkn1.rasa = "gurih";
-	mkn1.kalori = 293;
+	makanan makanan1;
+	makanan1.nama = "daging ayam";
+	makanan1.rasa = "gurih";
+	makanan1.kalori = 293;
 	
-	makanan mkn2;
-	mkn2.nama = "daging sapi";
-	mkn2.rasa = "gurih";
-	mkn2.kalori = 250;
+	makanan makanan2;
+	makanan2.nama = "daging sapi";
+	makanan2.rasa = "gurih";
+	makanan2.kalori = 250;
 	
-	makanan mkn3;
-	mkn3.nama = "tempe";
-	mkn3.rasa = "hambar";
-	mkn3.kalori = 192;
+	makanan makanan3;
+	makanan3.nama = "tempe";
+	makanan3.rasa = "hambar";
+	makanan3.kalori = 192;
 	
-	makanan mkn4;
-	mkn4.nama = "tahu";
-	mkn4.rasa = "gurih";
-	mkn4.kalori = 76;
+	makanan makanan4;
+	makanan4.nama = "tahu";
+	makanan4.rasa = "gurih";
+	makanan4.kalori = 76;
 	
-	makanan mkn5;
-	mkn5.nama = "pisang";
-	mkn5.rasa = "manis";
-	mkn5.kalori = 88;
+	makanan makanan5;
+	makanan5.nama = "pisang";
+	makanan5.rasa = "manis";
+	makanan5.kalori = 88;
 	
 	manusia m1;
 	m1.usia = 40;
@@ -59,9 +59,9 @@ int main() {
 	m1.TB = 170;
 	m1.BB = 60;
 	m1.jenisKelamin = "Pria";
-	m1.olahraga[0] = "berkuda";
-	m1.olahraga[1] = "angkat besi";
-	m1.olahraga[2] = "lari maraton";
+	m1.olahraga[0] = "Berkuda";
+	m1.olahraga[1] = "Angkat besi";
+	m1.olahraga[2] = "Lari maraton";
 	m1.tingkatKalori = 2500;
 	
 	manusia m2;
@@ -70,37 +70,37 @@ int main() {
 	m2.TB = 165;
 	m2.BB = 50;
 	m2.jenisKelamin = "Wanita";
-	m2.olahraga[0] = "berenang";
-	m2.olahraga[1] = "bersepeda";
-	m2.olahraga[2] = "lari";
-	m2.kalori = 2000;
+	m2.olahraga[0] = "Berenang";
+	m2.olahraga[1] = "Bersepeda";
+	m2.olahraga[2] = "Lari";
+	m2.tingkatKalori = 2000;
 	
-	m1.mkn(makanan1);
+	m1.makan(makanan1);
 	
-	m1.mkn(makanan2);
-	m1.mkn(makanan2);
-	m1.mkn(makanan2);
+	m1.makan(makanan2);
+	m1.makan(makanan2);
+	m1.makan(makanan2);
 	
-	m1.mkn(makanan3);
+	m1.makan(makanan3);
 	
-	m1.mkn(makanan4);
+	m1.makan(makanan4);
 	
-	m2.mkn(makanan1);
+	m2.makan(makanan1);
 	
-	m2.mkn(makanan2);
-	m2.mkn(makanan2);
+	m2.makan(makanan2);
+	m2.makan(makanan2);
 	
-	m2.mkn(makanan5);
+	m2.makan(makanan5);
 	
-	cout << "Nama saya adalah " << m1.nama << " berusia " << m1.umur << "\n";
+	cout << endl;
+	
+	cout << "Nama saya adalah " << m1.nama << " berusia " << m1.usia << "\n";
 	
 	for (int i = 0; i < 10; i++){
 		if (m2.olahraga[i] != " "){
-			cout << "Hobi Ke-" << i + 1 << m2.hobi[i] << "\n";
+			cout << "Olahraga Ke- " << i + 1 << " " << m2.olahraga[i] << "\n";
 		}
 	}
 	
 	return 0;
 }
-
-
