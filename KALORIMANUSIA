@@ -12,57 +12,57 @@ struct manusia {
 	string nama;
 	int TB;
 	int BB;
-	int jenisKelamin;
+	string jenisKelamin;
 	string olahraga [3];
-	int tingkatKolestrol;
+	int tingkatKalori;
 	
-	printkKolestrol() {
-		cout << "Tingkat Kolestrol" << nama << " saat ini adalah " << kelebihanBB << "\n";	
+	printKalori() {
+		cout << "Tingkat kalori" << nama << " saat ini adalah " << tingkatKalori << "\n";	
 	}
 
 	makan (makanan objekMakanan) {
-		tingkatKolestrol = tingkatKolestrol + objekMakanan.kalori;
+		tingkatKalori = tingkatKalori + objekMakanan.kalori;
 		cout << "Saya baru saja memakan " << objekMakanan.nama << " dan sekarang saya merasa kenyang" << "\n";
-		printKelebihanBB();
+		printKalori();
 	}
 };
 
 int main() {
-	makan mkn1;
+	makanan mkn1;
 	mkn1.nama = "daging ayam";
 	mkn1.rasa = "gurih";
 	mkn1.kalori = 293;
 	
-	makan mkn2;
+	makanan mkn2;
 	mkn2.nama = "daging sapi";
 	mkn2.rasa = "gurih";
 	mkn2.kalori = 250;
 	
-	makan mkn3;
+	makanan mkn3;
 	mkn3.nama = "tempe";
 	mkn3.rasa = "hambar";
 	mkn3.kalori = 192;
 	
-	makan mkn4;
+	makanan mkn4;
 	mkn4.nama = "tahu";
 	mkn4.rasa = "gurih";
 	mkn4.kalori = 76;
 	
-	mkana mkn5;
+	makanan mkn5;
 	mkn5.nama = "pisang";
 	mkn5.rasa = "manis";
 	mkn5.kalori = 88;
 	
 	manusia m1;
 	m1.usia = 40;
-	m1.nama = "Azmi;
+	m1.nama = "Azmi";
 	m1.TB = 170;
 	m1.BB = 60;
 	m1.jenisKelamin = "Pria";
 	m1.olahraga[0] = "berkuda";
 	m1.olahraga[1] = "angkat besi";
 	m1.olahraga[2] = "lari maraton";
-	m1.kalori = 2500;
+	m1.tingkatKalori = 2500;
 	
 	manusia m2;
 	m2.usia = 53;
@@ -92,13 +92,10 @@ int main() {
 	
 	m2.mkn(makanan5);
 	
-	cout << "Nama saya adalah " << manusia.nama << " berusia " << manusia.umur << "\n";
+	cout << "Nama saya adalah " << m1.nama << " berusia " << m1.umur << "\n";
 	
 	for (int i = 0; i < 10; i++){
-		if (m1.olahraga[i] !== " "){
-			cout << "Hobi Ke-" << i + 1 << m1.hobi[i] << "\n";
-		}
-		if (m2.olahraga[i] !== " "){
+		if (m2.olahraga[i] != " "){
 			cout << "Hobi Ke-" << i + 1 << m2.hobi[i] << "\n";
 		}
 	}
