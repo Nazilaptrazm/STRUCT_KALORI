@@ -1,0 +1,109 @@
+#include <iostream>
+using namespace std;
+
+struct makanan {
+	string nama;
+	int rasa;
+	int kalori;
+};
+
+struct manusia {
+	int usia;
+	string nama;
+	int TB;
+	int BB;
+	int jenisKelamin;
+	string olahraga [3];
+	int tingkatKolestrol;
+	
+	printkKolestrol() {
+		cout << "Tingkat Kolestrol" << nama << " saat ini adalah " << kelebihanBB << "\n";	
+	}
+
+	makan (makanan objekMakanan) {
+		tingkatKolestrol = tingkatKolestrol + objekMakanan.kalori;
+		cout << "Saya baru saja memakan " << objekMakanan.nama << " dan sekarang saya merasa kenyang" << "\n";
+		printKelebihanBB();
+	}
+};
+
+int main() {
+	makan mkn1;
+	mkn1.nama = "daging ayam";
+	mkn1.rasa = "gurih";
+	mkn1.kalori = 293;
+	
+	makan mkn2;
+	mkn2.nama = "daging sapi";
+	mkn2.rasa = "gurih";
+	mkn2.kalori = 250;
+	
+	makan mkn3;
+	mkn3.nama = "tempe";
+	mkn3.rasa = "hambar";
+	mkn3.kalori = 192;
+	
+	makan mkn4;
+	mkn4.nama = "tahu";
+	mkn4.rasa = "gurih";
+	mkn4.kalori = 76;
+	
+	mkana mkn5;
+	mkn5.nama = "pisang";
+	mkn5.rasa = "manis";
+	mkn5.kalori = 88;
+	
+	manusia m1;
+	m1.usia = 40;
+	m1.nama = "Azmi;
+	m1.TB = 170;
+	m1.BB = 60;
+	m1.jenisKelamin = "Pria";
+	m1.olahraga[0] = "berkuda";
+	m1.olahraga[1] = "angkat besi";
+	m1.olahraga[2] = "lari maraton";
+	m1.kalori = 2500;
+	
+	manusia m2;
+	m2.usia = 53;
+	m2.nama = "Ali";
+	m2.TB = 165;
+	m2.BB = 50;
+	m2.jenisKelamin = "Wanita";
+	m2.olahraga[0] = "berenang";
+	m2.olahraga[1] = "bersepeda";
+	m2.olahraga[2] = "lari";
+	m2.kalori = 2000;
+	
+	m1.mkn(makanan1);
+	
+	m1.mkn(makanan2);
+	m1.mkn(makanan2);
+	m1.mkn(makanan2);
+	
+	m1.mkn(makanan3);
+	
+	m1.mkn(makanan4);
+	
+	m2.mkn(makanan1);
+	
+	m2.mkn(makanan2);
+	m2.mkn(makanan2);
+	
+	m2.mkn(makanan5);
+	
+	cout << "Nama saya adalah " << manusia.nama << " berusia " << manusia.umur << "\n";
+	
+	for (int i = 0; i < 10; i++){
+		if (m1.olahraga[i] !== " "){
+			cout << "Hobi Ke-" << i + 1 << m1.hobi[i] << "\n";
+		}
+		if (m2.olahraga[i] !== " "){
+			cout << "Hobi Ke-" << i + 1 << m2.hobi[i] << "\n";
+		}
+	}
+	
+	return 0;
+}
+
+
